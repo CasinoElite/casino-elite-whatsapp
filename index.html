@@ -33,6 +33,7 @@
             background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para que se vea el texto */
             padding: 20px;
             border-radius: 10px;
+            max-width: 90%; /* Limita el ancho en dispositivos móviles */
         }
 
         h1, p {
@@ -53,15 +54,16 @@
             display: inline-block;
         }
 
-        /* Media queries para móviles */
+        /* Media queries para ajustar el diseño en móviles */
         @media (max-width: 768px) {
             body {
-                background-image: none; /* Quita la imagen de fondo en móviles */
-                background-color: black; /* Fondo liso para móviles */
+                background-size: contain; /* Ajusta la imagen de fondo para que se vea completa */
+                background-repeat: no-repeat; /* Evita que se repita la imagen */
             }
 
             .overlay {
                 width: 90%; /* Ajusta el ancho del texto en pantallas pequeñas */
+                background-color: rgba(0, 0, 0, 0.7); /* Fondo un poco más oscuro para mayor contraste en móviles */
             }
         }
     </style>
@@ -73,8 +75,4 @@
         <p>Si tienes alguna pregunta, no dudes en escribirnos.</p>
         <p>Aquí podrás encontrar la información que necesitas para comunicarte con nosotros.</p>
         <a href="https://wa.me/TUNUMERO" class="button" target="_blank">
-            CREA TU USUARIO AHORA
-        </a>
-    </div>
-</body>
-</html>
+            CREA TU USUARIO 
