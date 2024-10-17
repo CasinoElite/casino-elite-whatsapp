@@ -5,75 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            height: 100vh; /* Ocupa toda la altura de la ventana */
-            width: 100vw; /* Ocupa todo el ancho de la ventana */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi10.jpg?raw=true');
+            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi10.jpg?raw=true'); /* Imagen de fondo */
             background-size: cover;
             background-position: center;
             color: white;
-            position: relative; /* Para permitir que los elementos hijos estén posicionados sobre la imagen */
+            position: relative;
         }
 
-        /* Contenedor para el texto y el botón */
+        /* Estilo para el contenedor de texto y botón */
         .overlay {
-            position: absolute; /* Posiciona sobre la imagen */
-            z-index: 1; /* Se asegura que esté por encima de la imagen */
-            text-align: center;
+            position: relative;
+            z-index: 1; /* Asegura que esté sobre la imagen */
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para que se vea el texto */
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
             border-radius: 10px;
+        }
+
+        h1, p {
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto para mayor legibilidad */
         }
 
         .button {
             padding: 15px 25px;
             font-size: 18px;
             color: white;
-            background-color: rgba(37, 211, 102, 0.8); /* Color de WhatsApp con algo de transparencia */
+            background-color: rgba(37, 211, 102, 0.9); /* Color de botón WhatsApp */
             border: none;
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
             margin-top: 20px;
-        }
-
-        h1, p {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Mejora la legibilidad del texto sobre la imagen */
-        }
-
-        /* Imagen centrada que cubre todo el espacio restante */
-        .centered-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0; /* Se asegura de que esté detrás del texto */
+            display: inline-block;
         }
 
         /* Media queries para móviles */
         @media (max-width: 768px) {
             body {
-                background-image: none; /* Elimina la imagen de fondo para móviles */
-            }
-
-            .centered-image {
-                display: block;
-                object-fit: cover;
+                background-image: none; /* Quita la imagen de fondo en móviles */
+                background-color: black; /* Fondo liso para móviles */
             }
 
             .overlay {
-                padding: 15px;
+                width: 90%; /* Ajusta el ancho del texto en pantallas pequeñas */
             }
         }
     </style>
 </head>
 <body>
-    <!-- Imagen centrada para
+    <!-- Contenedor para el texto y el botón -->
+    <div class="overlay">
+        <h1>¡Contáctanos!</h1>
+        <p>Si tienes alguna pregunta, no dudes en escribirnos.</p>
+        <p>Aquí podrás encontrar la información que necesitas para comunicarte con nosotros.</p>
+        <a href="https://wa.me/TUNUMERO" class="button" target="_blank">
+            CREA TU USUARIO AHORA
+        </a>
+    </div>
+</body>
+</html>
