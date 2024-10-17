@@ -18,12 +18,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: black; /* Fondo negro para computadoras */
+            position: relative;
+            overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+        }
+
+        /* Imagen de fondo para dispositivos grandes */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/Casino%20%C3%A9lite%20(2).png?raw=true'); /* Imagen de fondo */
             background-size: contain; /* Muestra la imagen completa */
             background-position: center; /* Centra la imagen */
-            position: relative;
-            overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-repeat: no-repeat; /* Evita que se repita la imagen */
+            z-index: 0; /* Envía la imagen al fondo */
         }
 
         /* Estilo para el contenedor del botón */
@@ -35,7 +46,7 @@
             border-radius: 10px;
             max-width: 90%; /* Limita el ancho en dispositivos móviles */
             width: 400px; /* Ancho fijo para pantallas grandes */
-            margin: 0 auto; /* Centra el contenedor */
+            margin: -50px auto 0; /* Margen negativo en la parte superior para mover el botón más arriba */
         }
 
         .button {
@@ -54,6 +65,7 @@
         /* Media queries para ajustar el diseño en móviles */
         @media (max-width: 768px) {
             body {
+                background-color: black; /* Mantiene el fondo negro para móviles */
                 background-size: cover; /* Mantiene el tamaño de fondo cubriendo la pantalla en móviles */
                 background-repeat: no-repeat; /* Evita que se repita la imagen */
             }
@@ -66,6 +78,9 @@
     </style>
 </head>
 <body>
+    <!-- Imagen de fondo -->
+    <div class="background-image"></div>
+
     <!-- Contenedor para el botón -->
     <div class="overlay">
         <a href="https://wa.me/543575411461?text=Hola,%20vi%20este%20anuncio,%20quiero%20un%20usuario,%20gracias." class="button" target="_blank">
