@@ -7,28 +7,22 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
             margin: 0;
-            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi10.jpg?raw=true'); /* Imagen de fondo */
+            padding: 0;
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            width: 100vw; /* Ocupa todo el ancho de la ventana */
+            overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi10.jpg?raw=true');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             color: white;
-            position: relative;
         }
 
-        .centered-image {
-            width: 100vw; /* Asegura que la imagen ocupe todo el ancho de la ventana */
-            height: 100vh; /* La imagen cubre toda la altura de la ventana */
-            object-fit: cover; /* Ajusta la imagen para que cubra el espacio sin deformarse */
-        }
-
+        /* Contenedor para el texto y el botón */
         .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
             z-index: 1;
         }
@@ -37,7 +31,7 @@
             padding: 15px 25px;
             font-size: 18px;
             color: white;
-            background-color: rgba(37, 211, 102, 0.8); /* Color de WhatsApp */
+            background-color: rgba(37, 211, 102, 0.8);
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -49,39 +43,19 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* Ajustes para móviles */
+        /* Imagen centrada que cubre todo el espacio restante */
+        .centered-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para cubrir toda el área sin distorsión */
+            z-index: 0;
+        }
+
+        /* Media queries para móviles */
         @media (max-width: 768px) {
             body {
-                background-image: none;
-            }
-
-            .centered-image {
-                width: 100%; /* Asegura que la imagen cubra el ancho completo en móviles */
-                height: auto; /* Mantiene la proporción de la imagen */
-            }
-
-            .overlay {
-                width: 100%;
-                padding: 20px;
-                box-sizing: border-box; /* Ajusta el padding correctamente */
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Contenedor para el texto y el botón -->
-    <div class="overlay">
-        <h1>¡Contáctanos!</h1>
-        <p>Si tienes alguna pregunta, no dudes en escribirnos.</p>
-        <p>Aquí podrás encontrar la información que necesitas para comunicarte con nosotros.</p>
-        <a href="https://wa.me/TUNUMERO" class="button" target="_blank">
-            CREA TU USUARIO AHORA
-        </a>
-    </div>
-    
-    <!-- Imagen centrada para todos los dispositivos -->
-    <img src="https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi4.jpg?raw=true" alt="Imagen centrada" class="centered-image">
-</body>
-</html>
-
+                background
 
