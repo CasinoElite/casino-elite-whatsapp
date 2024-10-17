@@ -19,10 +19,11 @@
             justify-content: center;
             align-items: center;
             background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/Casino%20%C3%A9lite%20(2).png?raw=true'); /* Imagen de fondo */
-            background-size: cover; /* Cubre toda la pantalla */
+            background-size: contain; /* Muestra la imagen completa */
             background-position: center; /* Centra la imagen */
             position: relative;
             overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
         }
 
         /* Estilo para el contenedor del botón */
@@ -33,7 +34,8 @@
             padding: 20px;
             border-radius: 10px;
             max-width: 90%; /* Limita el ancho en dispositivos móviles */
-            width: 300px; /* Ancho fijo para pantallas grandes */
+            width: 400px; /* Ancho fijo para pantallas grandes */
+            margin: 0 auto; /* Centra el contenedor */
         }
 
         .button {
@@ -49,17 +51,16 @@
             z-index: 2; /* Asegura que el botón esté sobre el fondo */
         }
 
-        /* Media queries para ajustar el diseño en pantallas más grandes */
-        @media (min-width: 768px) {
-            .overlay {
-                padding: 30px; /* Aumenta el padding en pantallas más grandes */
-                background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para mayor contraste en computadoras */
-                width: 400px; /* Ancho fijo para computadoras de escritorio */
+        /* Media queries para ajustar el diseño en móviles */
+        @media (max-width: 768px) {
+            body {
+                background-size: cover; /* Mantiene el tamaño de fondo cubriendo la pantalla en móviles */
+                background-repeat: no-repeat; /* Evita que se repita la imagen */
             }
 
-            .button {
-                font-size: 20px; /* Aumenta el tamaño del botón en pantallas grandes */
-                padding: 20px 30px; /* Aumenta el tamaño del padding en el botón */
+            .overlay {
+                width: 90%; /* Ajusta el ancho del contenedor en pantallas pequeñas */
+                background-color: rgba(0, 0, 0, 0.7); /* Fondo un poco más oscuro para mayor contraste en móviles */
             }
         }
     </style>
@@ -67,7 +68,7 @@
 <body>
     <!-- Contenedor para el botón -->
     <div class="overlay">
-        <a href="https://wa.me/543575411461" class="button" target="_blank">
+        <a href="https://wa.me/TUNUMERO" class="button" target="_blank">
             CREA TU USUARIO AHORA
         </a>
     </div>
