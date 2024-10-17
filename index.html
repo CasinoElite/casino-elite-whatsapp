@@ -48,16 +48,16 @@
             z-index: 2; /* Asegura que el botón esté sobre el fondo */
         }
 
-        /* Media queries para ajustar el diseño en móviles */
-        @media (max-width: 768px) {
-            body {
-                background-size: cover; /* Mantiene el tamaño de fondo cubriendo la pantalla */
-                background-repeat: no-repeat; /* Evita que se repita la imagen */
+        /* Media queries para ajustar el diseño en pantallas más grandes */
+        @media (min-width: 768px) {
+            .overlay {
+                padding: 30px; /* Aumenta el padding en pantallas más grandes */
+                background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para mayor contraste en computadoras */
             }
 
-            .overlay {
-                width: 90%; /* Ajusta el ancho del contenedor en pantallas pequeñas */
-                background-color: rgba(0, 0, 0, 0.7); /* Fondo un poco más oscuro para mayor contraste en móviles */
+            .button {
+                font-size: 20px; /* Aumenta el tamaño del botón en pantallas grandes */
+                padding: 20px 30px; /* Aumenta el tamaño del padding en el botón */
             }
         }
     </style>
