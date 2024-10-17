@@ -14,16 +14,16 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            height: 100vh;
-            margin: 0;
+            height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
             display: flex;
             justify-content: center;
             align-items: center;
             background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi10.jpg?raw=true'); /* Imagen de fondo */
-            background-size: cover;
-            background-position: center;
+            background-size: cover; /* Cubre toda la pantalla */
+            background-position: center; /* Centra la imagen */
             color: white;
             position: relative;
+            overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
         }
 
         /* Estilo para el contenedor de texto y botón */
@@ -57,7 +57,7 @@
         /* Media queries para ajustar el diseño en móviles */
         @media (max-width: 768px) {
             body {
-                background-size: contain; /* Ajusta la imagen de fondo para que se vea completa */
+                background-size: cover; /* Mantiene el tamaño de fondo cubriendo la pantalla */
                 background-repeat: no-repeat; /* Evita que se repita la imagen */
             }
 
@@ -73,6 +73,5 @@
     <div class="overlay">
         <h1>¡Contáctanos!</h1>
         <p>Si tienes alguna pregunta, no dudes en escribirnos.</p>
-        <p>Aquí podrás encontrar la información que necesitas para comunicarte con nosotros.</p>
-        <a href="https://wa.me/TUNUMERO" class="button" target="_blank">
-            CREA TU USUARIO 
+        <p>Aquí podrás encontrar la información que n
+
