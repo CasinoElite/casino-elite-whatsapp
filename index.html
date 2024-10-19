@@ -67,7 +67,7 @@
             padding: 15px 25px;
             font-size: 18px;
             color: white;
-            background-color: rgba(37, 211, 102, 0.9);
+            background-color: rgba(37, 211, 102, 0.5); /* Color verde con opacidad */
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -76,19 +76,20 @@
             align-items: center; /* Alinea el contenido verticalmente */
             z-index: 2;
             transition: all 0.3s ease; /* Transición suave para el efecto */
+            backdrop-filter: blur(5px); /* Efecto de desenfoque de fondo */
         }
 
         /* Efecto hover para el botón */
         .button:hover {
-            background-color: rgba(37, 211, 102, 1); /* Color del botón */
+            background-color: rgba(37, 211, 102, 0.7); /* Color del botón más opaco al hacer hover */
             box-shadow: 0 0 15px rgba(37, 211, 102, 0.9); /* Sombra alrededor del botón */
             border-radius: 8px; /* Efecto de redondeo al hacer hover */
         }
 
         /* Estilo para el logo de WhatsApp */
         .button img {
-            width: 30px; /* Tamaño del logo aumentado */
-            height: 30px; /* Tamaño del logo aumentado */
+            width: 30px; /* Tamaño del logo */
+            height: 30px; /* Tamaño del logo */
             margin-right: 10px; /* Espacio entre el logo y el texto */
         }
 
