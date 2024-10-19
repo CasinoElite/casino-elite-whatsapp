@@ -44,7 +44,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi11.jpg?raw=true'); /* Coloca aquí la imagen de los costados */
+            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/publi11.jpg?raw=true');
             background-repeat: repeat-x; /* La imagen se repetirá en el eje horizontal */
             background-size: auto 100%; /* Ajuste en altura completa y repetición en ancho */
             opacity: 0.5; /* Ajusta la opacidad para hacer que no sobresalga demasiado */
@@ -74,6 +74,14 @@
             cursor: pointer;
             display: inline-block;
             z-index: 2;
+            transition: all 0.3s ease; /* Transición suave para el efecto */
+        }
+
+        /* Efecto hover para el botón */
+        .button:hover {
+            background-color: rgba(37, 211, 102, 1); /* Color del botón */
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.9); /* Sombra alrededor del botón */
+            border-radius: 8px; /* Efecto de redondeo al hacer hover */
         }
 
         /* Media queries para móviles */
