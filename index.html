@@ -14,74 +14,69 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: black; /* Fondo negro para computadoras */
+            background-color: black;
             position: relative;
-            overflow: hidden; /* Evita que aparezcan barras de desplazamiento */
+            overflow: hidden;
         }
 
-        /* Imagen de fondo para dispositivos grandes */
         .background-image {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/Casino%20%C3%A9lite%20(2).png?raw=true'); /* Imagen de fondo */
-            background-size: contain; /* Muestra la imagen completa */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* Evita que se repita la imagen */
-            z-index: 0; /* Envía la imagen al fondo */
+            background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/Casino%20%C3%A9lite%20(2).png?raw=true');
+            background-size: cover; /* Ajuste cambiado para cubrir toda la pantalla */
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
         }
 
-        /* Estilo para el contenedor del botón */
         .overlay {
             position: relative;
-            z-index: 1; /* Asegura que esté sobre la imagen */
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para que se vea el botón */
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
-            max-width: 90%; /* Limita el ancho en dispositivos móviles */
-            width: 400px; /* Ancho fijo para pantallas grandes */
-            margin: -50px auto 0; /* Margen negativo en la parte superior para mover el botón más arriba */
+            max-width: 90%;
+            width: 400px;
+            margin: 0 auto; /* Ajustado para centrar sin margen negativo */
         }
 
         .button {
             padding: 15px 25px;
             font-size: 18px;
             color: white;
-            background-color: rgba(37, 211, 102, 0.9); /* Color de botón WhatsApp */
+            background-color: rgba(37, 211, 102, 0.9);
             border: none;
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
             display: inline-block;
-            z-index: 2; /* Asegura que el botón esté sobre el fondo */
+            z-index: 2;
         }
 
-        /* Media queries para ajustar el diseño en móviles */
         @media (max-width: 768px) {
             body {
-                background-color: black; /* Mantiene el fondo negro para móviles */
-                background-size: cover; /* Mantiene el tamaño de fondo cubriendo la pantalla en móviles */
-                background-repeat: no-repeat; /* Evita que se repita la imagen */
+                background-color: black;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             .overlay {
-                width: 90%; /* Ajusta el ancho del contenedor en pantallas pequeñas */
-                background-color: rgba(0, 0, 0, 0.7); /* Fondo un poco más oscuro para mayor contraste en móviles */
+                width: 90%;
+                background-color: rgba(0, 0, 0, 0.7);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Imagen de fondo -->
     <div class="background-image"></div>
 
-    <!-- Contenedor para el botón -->
     <div class="overlay">
         <a href="https://wa.me/543575411461?text=Hola,%20vi%20este%20anuncio,%20quiero%20un%20usuario,%20gracias." class="button" target="_blank">
             CREA TU USUARIO AHORA
