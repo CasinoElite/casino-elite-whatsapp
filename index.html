@@ -23,7 +23,7 @@
             overflow: hidden;
         }
 
-        /* Imagen de fondo para pantallas grandes */
+        /* Imagen de fondo principal */
         .background-image {
             position: absolute;
             top: 0;
@@ -31,13 +31,27 @@
             right: 0;
             bottom: 0;
             background-image: url('https://github.com/CasinoElite/casino-elite-whatsapp/blob/main/Casino%20%C3%A9lite%20(2).png?raw=true');
-            background-size: contain; /* Muestra la imagen completa sin cortarla */
+            background-size: contain; /* Imagen centrada sin cortar */
             background-position: center;
-            background-repeat: no-repeat; /* No repite la imagen principal */
-            background-color: black; /* Fondo negro para las partes sobrantes */
+            background-repeat: no-repeat;
+            z-index: 0;
         }
 
-        /* Estilo para el contenedor del botón */
+        /* Imagen adicional para los costados */
+        .side-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('URL_DE_LA_IMAGEN_DE_COSTADOS'); /* Coloca aquí la imagen de los costados */
+            background-repeat: repeat-x; /* La imagen se repetirá en el eje horizontal */
+            background-size: auto 100%; /* Ajuste en altura completa y repetición en ancho */
+            opacity: 0.5; /* Ajusta la opacidad para hacer que no sobresalga demasiado */
+            z-index: -1; /* Coloca esta capa detrás de la imagen principal */
+        }
+
+        /* Contenedor para el botón */
         .overlay {
             position: relative;
             z-index: 1;
@@ -62,10 +76,14 @@
             z-index: 2;
         }
 
-        /* Media queries para móviles, manteniendo el diseño */
+        /* Media queries para móviles */
         @media (max-width: 768px) {
             .background-image {
-                background-size: cover; /* En móviles, la imagen cubre toda la pantalla */
+                background-size: cover;
+            }
+
+            .side-background {
+                display: none; /* Oculta las imágenes de los costados en móviles */
             }
 
             .overlay {
@@ -76,7 +94,10 @@
     </style>
 </head>
 <body>
-    <!-- Imagen de fondo -->
+    <!-- Imagen de fondo para los costados -->
+    <div class="side-background"></div>
+
+    <!-- Imagen de fondo principal -->
     <div class="background-image"></div>
 
     <!-- Contenedor para el botón -->
